@@ -1,4 +1,4 @@
-
+"use strict";
 function funRegistrar() {
     let inpValor = +document.getElementById("inpValor").value;
 

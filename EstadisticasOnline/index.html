@@ -6,39 +6,40 @@
     <meta charset="UTF-8">
     <title>Calculos - Fredy Pulido - 91330</title>
     <script src="Controlador.js"> </script>
-    <link rel="stylesheet" href="Estilos.css">
+    <link rel="stylesheet" type="text/css" href="Estilos.css">
 </head>
 
 <body>
     <h1>Estadisticas Online</h1>
 
-    <label>Valor: </label>
-    <input id="inpValor" placeholder="Ingrese un numero">
-    <input type="button" value="Registrar" onclick="funRegistrar()">
-
+    <div id="inputData">
+        <label>Valor: </label>
+        <input id="inpValor" placeholder="Ingrese un numero">
+        <input type="button" value="Registrar" onclick="funRegistrar()">
+    </div>
     <hr>
-    
+
     <form>
         <table>
             <tr>
-                <th class="lbl"> Cantidad:</th>
-                <th> <input id="inpCantidad"></th>
+                <th> Cantidad:</th>
+                <th> <input class="inpReadOnly" id="inpCantidad" disabled></th>
             </tr>
             <tr>
-                <th class="lbl">Promedio:</th>
-                <th><input id="inpPromedio"></th>
+                <th>Promedio:</th>
+                <th><input class="inpReadOnly" id="inpPromedio" disabled></th>
             </tr>
             <tr>
-                <th class="lbl">Mayor:</th>
-                <th><input id="inpMayor"></th>
+                <th>Mayor:</th>
+                <th><input class="inpReadOnly" id="inpMayor" disabled></th>
             </tr>
             <tr>
-                <th class="lbl">Menor:</th>
-                <th><input id="inpMenor"></th>
+                <th>Menor:</th>
+                <th><input class="inpReadOnly" id="inpMenor" disabled></th>
             </tr>
             <tr>
-                <th class="lbl">Total:</th>
-                <th><input id="inpTotal"> </th>
+                <th>Total:</th>
+                <th><input class="inpReadOnly" id="inpTotal" disabled> </th>
             </tr>
         </table>
 

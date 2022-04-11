@@ -1,7 +1,31 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 h1 {
     text-align: center;
 }
 
-.lbl {
+th {
     text-align: left;
 }
+
+.inpReadOnly{
+    font-weight: bold;
+}
+
+#inputData *{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input:disabled {
+    background-color: lightgray;
+}
+
+input[type="button"]{
+    color: green;
+} 
+
+input[type="reset"]{
+    color: red;
+} 
