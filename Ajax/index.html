@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo AJAX</title>
+</head>
+
+<body>
+    <div id="pnlLoading" style="display: block;">
+        <button type="button" onclick="loadData()">Consultar</button>
+        <input id="inpText1" type="text" />
+        <h4 id="inpstatus">La petición no ha sido inicializada.</h4>
+    </div>
+</body>
+
+<script>
+    function loadData() {
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onprogress = function () {
+            document.getElementById("inpstatus").innerText = "La petición está en progreso";
+        };
+
+        xhttp.onreadystatechange = function () {
+
+            if (this.readyState == 4 && this.status == 200) {
+                let o = JSON.parse(this.responseText)
+                document.getElementById("inpText1").value = o.title;
+                document.getElementById("inpstatus").innerText = "La petición está completa.";
+            }
+        };
+        xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts/45", true);
+        xhttp.send();
+    }
+</script>
+
+</html
