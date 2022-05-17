@@ -1,0 +1,46 @@
+<meta name="viewport" content="width=device-width">
+<!doctype html>
+<html lang="EN">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.1/pixi.min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let app = new PIXI.Application({
+            width: 256,
+            height: 256,
+            antialiasing: true,
+            transparent: false,
+            resolution: 1
+        }), Container = PIXI.Container,
+            loader = PIXI.loader,
+            resources = PIXI.loader.resources,
+            Graphics = PIXI.Graphics,
+            TextureCache = PIXI.utils.TextureCache,
+            Sprite = PIXI.Sprite;
+        document.body.appendChild(app.view);
+        let circle = new Graphics();
+        circle.beginFill(0x9966FF);
+        circle.drawCircle(0, 0, 32);
+        circle.endFill();
+        circle.x = 64;
+        circle.y = 130;
+        app.stage.addChild(circle);
+        app.renderer.view.style.border = "1px dashed black";
+        app.renderer.resize(512, 512);
+        app.renderer.backgroundColor = 0x061639;
+        loader.load(setup);
+        function setup() {
+            app.ticker.add(delta => gameLoop(delta));
+        }
+        function gameLoop(delta) {
+            circle.x += 1;
+        }
+    </script>
+</body>
+
+</html>
