@@ -16,8 +16,8 @@ function loadData() {
         }
     };
 
-    //xhttp.open("GET", "https://swapi.dev/api/people/" + idPersonaje, true);
-    xhttp.open("GET", "http://localhost:5000/data", true);
+    xhttp.open("GET", "https://swapi.dev/api/people/" + idPersonaje, true);
+    //xhttp.open("GET", "http://localhost:5000/data", true);
     xhttp.send();
 }
 

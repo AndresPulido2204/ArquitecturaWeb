@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="ES">
+
+<title>Sistema de Registros</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Registro.css">
+    <script src="Registro.js"> </script>
+</head>
+
+<body>
+    <button id="btnSessionStatus" class="floatRight" onclick="updateLoginStatus()">Iniciar sesion</button>
+    <button id="btnABMAlumnos" onclick="openABM('Alumnos')">ABM Alumnos</button>
+    <button id="btnABMUCursos" onclick="openABM('Cursos')">ABM Cursos</button>
+    <button id="btnReportes" onclick="OpentReportView()">Reportes</button>
+
+    <div id="mdlLogin" class="modal">
+        <div class="modal-content animate">
+            <div class="imgcontainer">
+                <img src="UP_logo.jpg" alt="Universidad de Palermo" class="avatar">
+            </div>
+
+            <div name="loginForm" class="container">
+                <label><b>Usuario</b></label>
+                <input id="txtUser" type="text" placeholder="Ingrese usuario">
+
+                <label><b>Password</b></label>
+                <input id="txtPass" type="password" placeholder="Ingrese password">
+
+                <button type="submit" onclick="validateUser()">Ingresar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mdlABMs" class="modal" style="display: none">
+        <div class="modal-content animate">
+
+            <div id="containerABM"></div>
+
+            <div class="container confirmation">
+                <button type="button" onclick="closeABM(mdlABMs)" class="cancelbtn">Cancel</button>
+                <button type="submit" class="submitBtn" onclick="saveABMinLocalStorage()">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mdlReports" class="modal" style="display: none">
+        <div class="modal-content animate">
+
+            <div id="ReportsContainer"></div>
+
+            <div class="container confirmation">
+                <button type="button" onclick="closeABM(mdlReports)" class="cancelbtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
